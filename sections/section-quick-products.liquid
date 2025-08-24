@@ -31,6 +31,15 @@
           {% endfor %}
         </div>
         {% endif %}
+        {% if optname == 'size' %}
+          <span class="optname">{{ option.name }}</span>
+          <select>
+            
+          {% for value in option.values %}
+           <option>{{ value }}</option>
+          {% endfor %}
+          </select>
+          {% endif %}
        {% endfor %}
       </div>
       </div>  
