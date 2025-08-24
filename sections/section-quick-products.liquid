@@ -21,6 +21,13 @@
         </div>
       </div>
       </div>  
+      <div class="popup-opt-inner">
+      {% for variant in pro.variants %}
+        {% if variant.available %}
+       {{ variant.title }}
+        {% endif %}
+      {% endfor %}
+      </div>
     </div>
      {% endif %}
     {% endfor %}
