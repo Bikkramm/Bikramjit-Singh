@@ -1,5 +1,10 @@
 <div class="quick-products-main">
-<h1 class="quick-pro-heading">{{section.settings.heading }}</h1>
+    <h1 class="quick-pro-heading">{{section.settings.heading }}</h1>
+    <div class="quick-products-wrap">
+     {% for pro in section.settings.prolist %}
+      {{ pro.title }}
+     {%endfor %}
+    </div>
 </div>
 {% schema %}
 {
