@@ -20,7 +20,7 @@
         {% endif %}
         </div>
       </div>
-      <div class="popup-opt-inner">
+      <div class="popup-opt-one">
        {% for option in pro.options_with_values %}
         {% assign optname = option.name | downcase %}
         {% if optname == 'color' %}
@@ -31,7 +31,8 @@
           {% endfor %}
         </div>
         {% endif %}
-        {% if optname == 'size' %}
+       <div class="popup-opt-two">
+                 {% if optname == 'size' %}
           <span class="optname">{{ option.name }}</span>
           <select name="size">
             
@@ -40,6 +41,7 @@
           {% endfor %}
           </select>
           {% endif %}
+       </div>
        {% endfor %}
       </div>
       </div>  
