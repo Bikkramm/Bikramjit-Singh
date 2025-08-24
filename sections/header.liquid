@@ -222,6 +222,9 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
+   {% if section.settings.heading_middle != blank %}
+    <span class="header-heading-middle">{{ section.settings.heading_middle }}</span>
+   {% endif %}
  {% comment %}
     <div class="header__icons  {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
