@@ -3,7 +3,26 @@
 {% endstyle %}
 <div class="img-banner-bg">
  <div class="page-width img-banner-content-wrap">
- 
+  <div class="content-wrap">
+  {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'heading' %}
+     {% if block.settings.heading != blank %}
+    <h2 class="inner-heading">{{ block.settings.heading }}</h2>
+     {% endif %}
+    {% when 'description' %}
+    {% if block.settings.description != blank %}
+     <div class="inner-description">
+     {{ block.settings.description }}
+     </div>
+    {% endif %}
+    {% when 'button' %}
+    {% if block.settings.btn_txt != blank %}
+     <a href="{{ block.settings.btn_link }}">{{ block.settings.btn_txt }}</a>
+    {% endif %}
+    {% endcase %}
+  {% endfor %}
+  </div>
  </div>
 </div>
 {% schema %}
