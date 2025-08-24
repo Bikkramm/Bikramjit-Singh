@@ -1,5 +1,13 @@
 {% style %}
-  
+  .img-banner-bg{
+    {% if section.settings.bg_img != blank %}
+     background-image:url('{{ section.settings.bg_img | img_url: "master" }}');
+     background-size:cover;
+     background-repeat:no-repeat;
+     background-position:center;
+     width:100%;
+    {% endif %}
+  }
 {% endstyle %}
 <div class="img-banner-bg">
  <div class="page-width img-banner-content-wrap">
