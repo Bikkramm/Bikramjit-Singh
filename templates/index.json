@@ -71,10 +71,26 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "section_quick_products_TbbraB": {
+      "type": "section-quick-products",
+      "name": "Section Quick Products",
+      "settings": {
+        "heading": "Tisso vison in the wild",
+        "prolist": [
+          "black-leather-bag",
+          "blue-silk-tuxedo",
+          "chequered-red-shirt",
+          "classic-leather-jacket",
+          "classic-varsity-top",
+          "dark-denim-top"
+        ]
+      }
     }
   },
   "order": [
     "gift_image_banner_T9Bx8X",
-    "featured_collection"
+    "featured_collection",
+    "section_quick_products_TbbraB"
   ]
 }
