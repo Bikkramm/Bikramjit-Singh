@@ -225,7 +225,7 @@
    {% if section.settings.heading_middle != blank %}
     <span class="header-heading-middle">{{ section.settings.heading_middle }}</span>
    {% endif %}
-   {% if section.settings.header_btn_link != blank %}
+   {% if section.settings.header_btn_txt != blank %}
    <a href="{{ section.settings.header_btn_link }}">
     {{ section.settings.header_btn_txt }}
    </a>
@@ -499,7 +499,8 @@
     {
       "type": "text",
       "id": "header_btn_txt",
-      "label": "Button Text"
+      "label": "Button Text",
+      "default": "CHOOSE GIFT"
     },
     {
       "type": "select",
