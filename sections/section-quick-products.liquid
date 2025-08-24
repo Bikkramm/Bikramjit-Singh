@@ -8,7 +8,7 @@
        <button class="quick-pro-btn" data-target="popup-{{ forloop.index }}">+</button>
       </div>
       <div id="popup-{{forloop.index }}" class="quick-pro-popup">
-
+       <img src="{{ pro.featured_image | img_url: 'original' }}" width="120px" height="140px" class="quick-pro-img">
       </div>
      {% endif %}
     {% endfor %}
