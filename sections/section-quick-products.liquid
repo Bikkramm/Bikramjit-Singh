@@ -34,12 +34,14 @@
        <div class="popup-opt-two">
                  {% if optname == 'size' %}
           <span class="optname">{{ option.name }}</span>
+          <div class="optvalues">
           <select name="size">
             
           {% for value in option.values %}
            <option>{{ value }}</option>
           {% endfor %}
           </select>
+        </div>
           {% endif %}
        </div>
        {% endfor %}
