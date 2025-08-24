@@ -11,6 +11,32 @@
   "sections": {
     "gift_image_banner_T9Bx8X": {
       "type": "gift-image-banner",
+      "blocks": {
+        "heading_7q8jLa": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Gift Guide"
+          }
+        },
+        "description_b7rPxK": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>"
+          }
+        },
+        "button_CepBmc": {
+          "type": "Button",
+          "settings": {
+            "btn_link": "",
+            "btn_txt": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7q8jLa",
+        "description_b7rPxK",
+        "button_CepBmc"
+      ],
       "name": "Gift Image Banner",
       "settings": {
         "bg_img": "shopify://shop_images/Group_1000008197.jpg",
