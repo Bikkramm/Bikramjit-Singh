@@ -225,6 +225,11 @@
    {% if section.settings.heading_middle != blank %}
     <span class="header-heading-middle">{{ section.settings.heading_middle }}</span>
    {% endif %}
+   {% if section.settings.header_btn_link != blank %}
+   <a href="{{ section.settings.header_btn_link }}">
+    {{ section.settings.header_btn_txt }}
+   </a>
+   {% endif %}
  {% comment %}
     <div class="header__icons  {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
