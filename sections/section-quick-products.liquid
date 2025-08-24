@@ -4,7 +4,7 @@
      {% for pro in section.settings.prolist %}
      {% if pro.featured_image != blank %}
       <div class="quick-pro-item">
-       <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="444px">
+       <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="444px" class="quick-pro-img">
       </div>
      {% endif %}
     {% endfor %}
