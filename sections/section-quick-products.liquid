@@ -24,6 +24,7 @@
        {% for option in pro.options_with_values %}
         {% assign optname = option.name | downcase %}
         {% if optname == 'color' %}
+          <span class="optname">{{ option.name }}</span>
           {% for value in option.values %}
             {{ value }}
           {% endfor %}
