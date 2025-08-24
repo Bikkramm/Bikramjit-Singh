@@ -8,8 +8,9 @@
        <button class="quick-pro-btn" data-target="popup-{{ forloop.index }}">+</button>
       </div>
       <div id="popup-{{forloop.index }}" class="popup">
-      <div class="popup-content-inner">
         <span class="close">&times;</span>
+      <div class="popup-content-inner">
+        
        <img src="{{ pro.featured_image | img_url: 'original' }}" width="120px" height="140px" class="quick-pro-img">
       </div>  
     </div>
