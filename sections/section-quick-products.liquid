@@ -25,9 +25,11 @@
         {% assign optname = option.name | downcase %}
         {% if optname == 'color' %}
           <span class="optname">{{ option.name }}</span>
+          <div class="optvalues">
           {% for value in option.values %}
             {{ value }}
           {% endfor %}
+        </div>
         {% endif %}
        {% endfor %}
       </div>
