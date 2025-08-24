@@ -14,7 +14,7 @@
        <img src="{{ pro.featured_image | img_url: 'original' }}" width="120px" height="140px" class="quick-pro-img">
         <div class="quick-pro-info">
         <span class="quick-pro-title">{{ pro.title }}</span>
-        <span class="quick-pro-price">{{ pro.price | money_with_currency }}</span>
+        <span class="quick-pro-price">{{ pro.price | money_without_currency }}</span>
         {% if pro.description != blank %}
          <span class="quick-pro-description">{{pro.description }}</span>
         {% endif %}
