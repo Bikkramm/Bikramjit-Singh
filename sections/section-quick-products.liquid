@@ -20,12 +20,10 @@
         {% endif %}
         </div>
       </div>
-            <div class="popup-opt-inner">
-      {% for variant in pro.variants %}
-        {% if variant.available %}
-       {{ variant.title }}
-        {% endif %}
-      {% endfor %}
+      <div class="popup-opt-inner">
+       {% for option in pro.options_with_values %}
+        {{ option.name }}
+       {% endfor %}
       </div>
       </div>  
 
