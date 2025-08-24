@@ -2,8 +2,12 @@
     <h1 class="quick-pro-heading">{{section.settings.heading }}</h1>
     <div class="quick-products-wrap">
      {% for pro in section.settings.prolist %}
-      {{ pro.title }}
-     {%endfor %}
+     {% if pro.featured_image != blank %}
+      <div class="quick-pro-item">
+       <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="100%">
+      </div>
+     {% endif %}
+    {% endfor %}
     </div>
 </div>
 {% schema %}
