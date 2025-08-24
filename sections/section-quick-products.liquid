@@ -10,7 +10,16 @@
       <div id="popup-{{forloop.index }}" class="popup">
       <div class="popup-content-inner">
         <span class="close">&times;</span>
+       <div class="quick-pro-img-inner">
        <img src="{{ pro.featured_image | img_url: 'original' }}" width="120px" height="140px" class="quick-pro-img">
+        <div class="quick-pro-info">
+        <span class="quick-pro-title">{{ pro.title }}</span>
+        <span class="quick-pro-price">{{ pro.price | money_with_currency }}</span>
+        {% if pro.description != blank %}
+         <span class="quick-pro-description">{{pro.description }}</span>
+        {% endif %}
+        </div>
+      </div>
       </div>  
     </div>
      {% endif %}
