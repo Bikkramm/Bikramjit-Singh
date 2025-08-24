@@ -7,7 +7,7 @@
        <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="444px" class="quick-pro-img">
        <button class="quick-pro-btn" data-target="popup-{{ forloop.index }}">+</button>
       </div>
-      <div id="popup-{{forloop.index }}" class="quick-pro-popup">
+      <div id="popup-{{forloop.index }}" class="popup">
       <div class="popup-content-inner">
        <img src="{{ pro.featured_image | img_url: 'original' }}" width="120px" height="140px" class="quick-pro-img">
       </div>  
@@ -16,6 +16,30 @@
     {% endfor %}
     </div>
 </div>
+<script>
+
+document.querySelectorAll('.quick-view-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    let targetId = this.getAttribute('data-target');
+    document.getElementById(targetId).style.display = 'block';
+  });
+});
+
+document.querySelectorAll('.popup .close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', function() {
+    this.closest('.popup').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', function(e) {
+  document.querySelectorAll('.popup').forEach(popup => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+
+</script>
 {% schema %}
 {
 "name": "Section Quick Products",
