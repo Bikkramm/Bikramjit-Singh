@@ -22,7 +22,12 @@
       </div>
       <div class="popup-opt-inner">
        {% for option in pro.options_with_values %}
-        {{ option.name }}
+        {% assign optname = option.name | downcase %}
+        {% if optname == 'color' %}
+          {% for value in option.values %}
+            {{ value }}
+          {% endfor %}
+        {% endif %}
        {% endfor %}
       </div>
       </div>  
