@@ -99,7 +99,11 @@ document.querySelectorAll('.add-pro-btn').forEach(button => {
 
   });
 });
-let firstColor = document.querySelectorAll('.color-item')[0].classList.add("active");
+let firstColor = document.querySelectorAll('.color-item')[0];
+if(firstColor){
+  firstColor.classList.add('active');
+}
+
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
     document.querySelectorAll('.color-item').forEach(function(c){
