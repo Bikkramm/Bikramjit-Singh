@@ -161,13 +161,13 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
       })
       .then(res => res.json())
       .then(data => {
-        {% comment %} alert("Added to cart!");
-        console.log(data); {% endcomment %}
+        /*alert("Added to cart!");
+        console.log(data);*/
         document.querySelector('.popup-content-only').style.display = 'none';
         document.querySelector('.popup-success').style.display = 'flex';
-        {% comment %} setTimeout(function(){
+        /* setTimeout(function(){
         window.location.href = "/cart";
-        }, 1000); {% endcomment %}
+        }, 1000);*/
       })
       .catch(err => {
         console.error(err);
