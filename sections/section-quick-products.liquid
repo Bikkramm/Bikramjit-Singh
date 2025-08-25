@@ -28,7 +28,10 @@
           <span class="optname">{{ option.name }}</span>
           <div class="optvalues">
           {% for value in option.values %}
-            <div class="color-item" style="border-left:5px solid {{ value }}"><span class="divider"></span>{{ value }}</div>
+            <div class="color-item" style="border-left:5px solid {{ value }}">
+             <span class="divider"></span>
+             <span class="val">{{ value }}</span>
+          </div>
           {% endfor %}
         </div>
       </div>
