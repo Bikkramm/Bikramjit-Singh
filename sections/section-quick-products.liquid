@@ -99,6 +99,67 @@ document.querySelectorAll('.add-pro-btn').forEach(button => {
 
   });
 });
+document.querySelectorAll('.add-pro-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+
+    const popup = this.closest('.popup'); 
+
+    // color jo selected hai
+    const selectedColor = popup.querySelector('.color-item.selected .val')?.innerText?.trim();
+    // size jo dropdown se selected hai
+    const selectedSize = popup.querySelector('.size-options select')?.value?.trim();
+
+    if(!selectedColor || !selectedSize){
+      alert("Please select color and size");
+      return;
+    }
+
+    // variant match karna
+    let variantId = null;
+    popup.querySelectorAll('.variant-item').forEach(function(v){
+      const vColor = v.getAttribute('data-color');
+      const vSize = v.getAttribute('data-size');
+      if(vColor === selectedColor && vSize === selectedSize){
+        variantId = v.getAttribute('data-id');
+      }
+    });
+
+    if(!variantId){
+      alert("This combination is not available!");
+      return;
+    }
+
+    // Add to cart request
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        items: [{
+          id: variantId,
+          quantity: 1
+        }]
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Added to cart:", data);
+      alert("Product added to cart!");
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Error adding to cart!");
+    });
+  });
+});
+
+// color div par click pe .selected class lagana
+document.querySelectorAll('.color-item').forEach(function(item){
+  item.addEventListener('click', function(){
+    const parent = this.closest('.optvalues');
+    parent.querySelectorAll('.color-item').forEach(c => c.classList.remove('selected'));
+    this.classList.add('selected');
+  });
+});
 
 </script>
 {% schema %}
