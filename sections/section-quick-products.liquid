@@ -55,6 +55,18 @@
        
        {% endfor %}
       </div>
+      <div class="variant-data" style="display:none;">
+  {% for variant in pro.variants %}
+    {% if variant.available %}
+      <div class="variant-item"
+           data-id="{{ variant.id }}"
+           data-color="{{ variant.option1 | downcase }}"
+           data-size="{{ variant.option2 | downcase }}">
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
       <button class="add-pro-btn" data-id="">Add to Cart</button>
       </div>  
 
