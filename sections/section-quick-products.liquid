@@ -117,47 +117,6 @@ document.querySelectorAll('.color-item').forEach(function(item){
     this.classList.add("active");
   });
 });
-$('.add-pro-btn').on('click', function(){
-
-  let popup = $(this).closest('.popup');
-
-  // active color
-  let selectedColor = popup.find('.color-item.active').data('color');
-
-  // selected size
-  let selectedSize = popup.find('select[name="size"]').val();
-
-  // matching variant
-  let matchedVariant = popup.find('.pro-val').filter(function(){
-    return $(this).data('color') == selectedColor && $(this).data('size') == selectedSize;
-  });
-
-  if(matchedVariant.length){
-    let variantId = matchedVariant.data('id');
-
-    // Shopify add to cart call
-    $.ajax({
-      type: 'POST',
-      url: '/cart/add.js',
-      data: {
-        id: variantId,
-        quantity: 1
-      },
-      dataType: 'json',
-      success: function(res){
-        alert("Added to cart!");
-        console.log(res);
-      },
-      error: function(){
-        alert("Error adding to cart");
-      }
-    });
-
-  }else{
-    alert("Please select Color & Size properly");
-  }
-
-});
 
 </script>
 {% schema %}
