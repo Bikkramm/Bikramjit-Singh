@@ -58,7 +58,7 @@
       <div class="pro-card-val" style="display:none;visibility:hidden;">
        {% for variant in pro.variants %}
         {% if variant.available %}
-        <input type="hidden" class="pro-val" data-id="{{ variant.id }}">
+        <input type="hidden" class="pro-val" data-id="{{ variant.id }}" data-color="{{ variant.option1 }}" data-size="{{ variant.option2 }}">
         {% endif %}
        {% endfor %}
       </div>
