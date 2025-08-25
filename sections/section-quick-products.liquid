@@ -166,6 +166,7 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
       .then(data => {
         alert("Added to cart!");
         console.log(data);
+        window.location.href = "/cart";
       })
       .catch(err => {
         console.error(err);
