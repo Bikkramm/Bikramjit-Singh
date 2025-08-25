@@ -161,8 +161,10 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
       })
       .then(res => res.json())
       .then(data => {
-        alert("Added to cart!");
-        console.log(data);
+        {% comment %} alert("Added to cart!");
+        console.log(data); {% endcomment %}
+        document.querySelector('.popup-content-only').style.display = 'none';
+        document.querySelector('.popup-success').style.display = 'flex';
         window.location.href = "/cart";
       })
       .catch(err => {
