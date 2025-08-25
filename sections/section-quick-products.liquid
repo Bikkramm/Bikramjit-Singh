@@ -117,6 +117,66 @@ document.querySelectorAll('.color-item').forEach(function(item){
     this.classList.add("active");
   });
 });
+document.querySelectorAll('.add-pro-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+
+    let popup = this.closest('.popup');
+
+    // active color
+    let activeColor = popup.querySelector('.color-item.active');
+    let selectedColor = activeColor ? activeColor.getAttribute('data-color') : null;
+
+    // selected size
+    let sizeSelect = popup.querySelector('select[name="size"]');
+    let selectedSize = sizeSelect ? sizeSelect.value : null;
+
+    if(!selectedColor || !selectedSize){
+      alert("Please select Color & Size");
+      return;
+    }
+
+    // find matching hidden variant
+    let variants = popup.querySelectorAll('.pro-val');
+    let matchedVariant = null;
+
+    variants.forEach(function(variant){
+      if(
+        variant.getAttribute('data-color') === selectedColor &&
+        variant.getAttribute('data-size') === selectedSize
+      ){
+        matchedVariant = variant;
+      }
+    });
+
+    if(matchedVariant){
+      let variantId = matchedVariant.getAttribute('data-id');
+
+      // Add to cart via fetch
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: 1
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert("Added to cart!");
+        console.log(data);
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Error adding to cart");
+      });
+    } else {
+      alert("No matching variant found");
+    }
+
+  });
+});
 
 </script>
 {% schema %}
