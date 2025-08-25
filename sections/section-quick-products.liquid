@@ -101,8 +101,9 @@ document.querySelectorAll('.add-pro-btn').forEach(button => {
 });
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
-    this.classList.add("active");
+    
     item.classList.remove("active");
+    this.classList.add("active");
   });
 });
 </script>
