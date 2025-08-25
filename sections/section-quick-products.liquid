@@ -165,9 +165,9 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
         console.log(data); {% endcomment %}
         document.querySelector('.popup-content-only').style.display = 'none';
         document.querySelector('.popup-success').style.display = 'flex';
-        setTimeout(function(){
+        {% comment %} setTimeout(function(){
         window.location.href = "/cart";
-        }, 1000);
+        }, 1000); {% endcomment %}
       })
       .catch(err => {
         console.error(err);
