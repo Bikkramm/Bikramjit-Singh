@@ -24,12 +24,14 @@
        {% for option in pro.options_with_values %}
         {% assign optname = option.name | downcase %}
         {% if optname == 'color' %}
+          <div class="color-options">
           <span class="optname">{{ option.name }}</span>
           <div class="optvalues">
           {% for value in option.values %}
             {{ value }}
           {% endfor %}
         </div>
+      </div>
         {% endif %}
        
                  {% if optname == 'size' %}
