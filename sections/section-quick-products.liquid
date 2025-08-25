@@ -61,7 +61,9 @@
       <div class="variant-item"
            data-id="{{ variant.id }}"
            data-color="{{ variant.option1 | downcase }}"
-           data-size="{{ variant.option2 | downcase }}">
+           data-size="{{ variant.option2 | downcase }}"
+          data-product="{{ pro.title }}"
+          >
       </div>
     {% endif %}
   {% endfor %}
