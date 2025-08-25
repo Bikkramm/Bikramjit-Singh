@@ -30,7 +30,7 @@
           {% for value in option.values %}
             <div class="color-item" style="border-left:5px solid {{ value }}">
              <span class="divider"></span>
-             <span class="val">{{ value }}</span>
+             <span class="color-item-val val" data-color="{{ value }}">{{ value }}</span>
           </div>
           {% endfor %}
         </div>
