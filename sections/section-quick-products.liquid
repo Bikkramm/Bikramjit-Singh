@@ -55,7 +55,13 @@
        
        {% endfor %}
       </div>
-      <input type="hidden" class="pro-card-val" data-id="{% for variant in pro.variants %}{% if variant.available %}{{ variant.id }}{% endif %}{% endfor %}">
+      <div class="pro-card-val" style="display:none;visibility:hidden;">
+       {% for variant in pro.variants %}
+        {% if variant.available %}
+        <input type="hidden" class="pro-val" data-id="{{ variant.id }}">
+        {% endif %}
+       {% endfor %}
+      </div>
       <button class="add-pro-btn" data-id="">Add to Cart</button>
       </div>  
 
