@@ -100,7 +100,7 @@ document.querySelectorAll('.add-pro-btn').forEach(button => {
 
   });
 });
-function(firstcoloritem){
+function firstcoloritem(){
 document.querySelectorAll('.popup').forEach(function(popup){
   let firstcolor = popup.querySelector('.color-item');
   if(firstcolor){
@@ -108,6 +108,7 @@ document.querySelectorAll('.popup').forEach(function(popup){
   }
 });
 }
+firstcoloritem();
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
     document.querySelectorAll('.color-item').forEach(function(c){
