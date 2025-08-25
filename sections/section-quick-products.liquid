@@ -76,6 +76,7 @@ document.querySelectorAll('.quick-pro-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     let targetId = this.getAttribute('data-target');
     document.getElementById(targetId).style.display = 'flex';
+    firstcoloritem();
   });
 });
 
@@ -99,13 +100,14 @@ document.querySelectorAll('.add-pro-btn').forEach(button => {
 
   });
 });
+function(firstcoloritem){
 document.querySelectorAll('.popup').forEach(function(popup){
   let firstcolor = popup.querySelector('.color-item');
   if(firstcolor){
    firstcolor.classList.add('active');
   }
 });
-
+}
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
     document.querySelectorAll('.color-item').forEach(function(c){
