@@ -171,10 +171,14 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
         console.log(data);*/
         popup.querySelector('.popup-content-only').style.display = 'none';
         popup.querySelector('.popup-success').style.display = 'flex';
-    
-        /* setTimeout(function(){
+        document.querySelectorAll('.go-cart-btn').forEach(function(gobtn){
+         gobtn.addEventListener('click',function(){
+          setTimeout(function(){
         window.location.href = "/cart";
-        }, 1000);*/
+        }, 1000);
+        });
+        });
+   
       })
       .catch(err => {
         console.error(err);
