@@ -31,8 +31,9 @@
           {% endfor %}
         </div>
         {% endif %}
-       <div class="popup-opt-two">
+       
                  {% if optname == 'size' %}
+                  <div class="size-options">
           <span class="optname">{{ option.name }}</span>
           <div class="optvalues">
           <select name="size">
@@ -44,8 +45,9 @@
           {% endfor %}
           </select>
         </div>
+        </div>
           {% endif %}
-       </div>
+       
        {% endfor %}
       </div>
       </div>  
