@@ -31,9 +31,20 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "header_new_layout_nM4CTn": {
+      "type": "header-new-layout",
+      "name": "Header New Layout",
+      "settings": {
+        "logo": "shopify://shop_images/Group_1000007777.png",
+        "mid_text": "",
+        "btn_txt": "",
+        "btn_link": ""
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "header_new_layout_nM4CTn"
   ]
 }

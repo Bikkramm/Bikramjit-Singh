@@ -3,7 +3,7 @@
   <div class="header-new-wrap">
    {% if section.settings.logo != blank %}
    <div class="h-n-logo">
-    <img src="{{ section.settings.logo | img_url: 'master' }}" width="100%" height="100%">
+    <img src="{{ settings.logo | img_url: 'master' }}" width="{{ settings.logo_width }}" height="100%">
    </div>
    {% endif %}
    {% if section.settings.mid_text != blank %}
