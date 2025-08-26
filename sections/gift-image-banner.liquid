@@ -1,4 +1,7 @@
 {% style %}
+.section-gift-image-banner{
+   padding-bottom:50px;
+}
 .img-banner-bg{
     {% if section.settings.bg_img != blank %}
      background-image:url('{{ section.settings.bg_img | img_url: "master" }}');
