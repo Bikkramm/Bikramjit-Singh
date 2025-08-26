@@ -104,7 +104,7 @@ document.querySelectorAll('.quick-pro-btn').forEach(btn => {
     popup.querySelector('.popup-success').style.display = 'none';
 
     popup.style.display = 'flex';
-    firstcoloritem();
+    /*firstcoloritem();*/
   });
 });
 
@@ -123,7 +123,7 @@ window.addEventListener('click', function(e) {
   });
 });
 
-
+/*
 function firstcoloritem(){
 document.querySelectorAll('.popup').forEach(function(popup){
   let firstcolor = popup.querySelector('.color-item');
@@ -132,7 +132,8 @@ document.querySelectorAll('.popup').forEach(function(popup){
   }
 });
 }
-firstcoloritem();
+firstcoloritem();*/
+
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
     document.querySelectorAll('.color-item').forEach(function(c){
