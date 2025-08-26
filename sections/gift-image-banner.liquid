@@ -82,7 +82,7 @@
      {% if block.settings.heading != blank %}
     <h2 class="inner-heading">{{ block.settings.heading }}</h2>
      {% endif %}
-    {% when 'description' %}
+    {% when 'mobile_description' %}
     {% if block.settings.description != blank %}
      <div class="inner-description">
      {{ block.settings.description }}
@@ -188,6 +188,18 @@
          "label": "Description",
         }
      ]
+    },
+    {
+      "type": "mobile_description",
+      "name": "Mobile Description",
+      "limit": 1,
+      "settings": [
+         {
+         "type": "richtext",
+         "id": "mob_desc",
+         "label": "Mobile Description"
+         }
+      ]
     },
     {
      "type": "Button",
