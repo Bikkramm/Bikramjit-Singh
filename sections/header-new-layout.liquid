@@ -12,6 +12,19 @@
    {% if section.settings.btn_txt != blank %}
     <a href="{{ section.settings.btn_link }}" class="header_main_btn small-hide medium-hide">{{ section.settings.btn_txt }}</a>
    {% endif %}
+   <div class="large-up-hide" id="mobile-burger">
+    <span></span>
+    </div>
+    <div id="menu">
+    <ul>
+    <li>{{ section.settings.mid_text }}</li>
+    <li>
+      <a href="{{ section.settings.btn_link }}" class="header_main_btn">
+       {{ section.settings.btn_txt }}
+      </a>
+    </li>
+    </ul>
+    </div>
   </div>
  </div>
 </div>
