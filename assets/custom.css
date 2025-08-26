@@ -360,7 +360,14 @@
 }
 }
 @media screen and (max-width:767px){
+.section-gift-image-banner{
+    padding-bottom:40px !important;
+}
 .section-quick-products .quick-products-wrap{
     gap:5px;
+}
+.section-quick-products .quick-pro-heading{
+    text-align:center;
+    font-size:24px;
 }
 }
