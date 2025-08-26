@@ -134,7 +134,7 @@
  </div>
  {% if section.settings.mob_img != blank %}
   <div class="banner-mobile-content">
-  <img src="{{ section.settings.mob_img | img_url: 'master' }}" width="100%" height="100%">
+  <img src="{{ section.settings.mob_img | img_url: 'master' }}" width="100%" height="100%" class="banner-mobile-img">
   {% if section.settings.mob_btn_txt != blank %}
    <div class="banner-mobile-button">
     <a href="{{ section.settings.mob_btn_link }}" class="inner-btn"> 
