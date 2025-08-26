@@ -13,6 +13,7 @@
   "sections": {
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "heading_middle": "Find the ideal gift for your loved ones.",
         "header_btn_link": "",
@@ -36,9 +37,8 @@
       "type": "header-new-layout",
       "name": "Header New Layout",
       "settings": {
-        "logo": "shopify://shop_images/Group_1000007777.png",
-        "mid_text": "",
-        "btn_txt": "",
+        "mid_text": "Find the ideal gift for your loved ones.",
+        "btn_txt": "CHOOSE GIFT",
         "btn_link": ""
       }
     }
