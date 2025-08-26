@@ -57,8 +57,8 @@
 }
 {% endstyle %}
 <div class="img-banner-bg">
- <div class="page-width img-banner-content-wrap">
-  <div class="content-wrap">
+ <div class="img-banner-content-wrap">
+  <div class="page-width content-wrap">
   {% for block in section.blocks %}
     {% case block.type %}
     {% when 'heading' %}
@@ -78,8 +78,9 @@
     {% endcase %}
   {% endfor %}
   </div>
+  <div class="bottom-bar-txt">{{ section.settings.bottom_bar_txt }}</div>
  </div>
- <div class="bottom-bar-txt">{{ section.settings.bottom_bar_txt }}</div>
+ 
 </div>
 {% schema %}
 {
