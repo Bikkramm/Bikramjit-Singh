@@ -152,7 +152,7 @@
   {% endif %}
   </div>
  {% endif %}
- <div class="bottom-bar-txt">{{ section.settings.bottom_bar_txt }}</div>
+ <div class="bottom-bar-txt">{{ section.settings.bottom_bar_mob_txt }}</div>
 </div>
 {% schema %}
 {
@@ -182,8 +182,13 @@
   {
    "type": "text",
    "id": "bottom_bar_txt",
-   "label": "Bottom Bar Text",
+   "label": "Desktop Bottom Bar Text",
    "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+  },
+  {
+   "type": "text",
+   "id": "bottom_bar_mob_txt",
+   "label": "Mobile Bottom Bar Text"
   }
  ],
  "blocks": [
