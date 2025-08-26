@@ -27,7 +27,7 @@
         "button_CepBmc": {
           "type": "Button",
           "settings": {
-            "btn_link": "",
+            "btn_link": "shopify://collections",
             "btn_txt": "SHOP NOW"
           }
         },
