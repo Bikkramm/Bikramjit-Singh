@@ -93,8 +93,8 @@ document.querySelectorAll('.quick-pro-btn').forEach(btn => {
     let targetId = this.getAttribute('data-target');
     document.getElementById(targetId).style.display = 'flex';
     firstcoloritem();
-    document.querySelector('.popup-success').style.display = 'none';
-    document.querySelector('.popup-content-only').style.display = 'block';
+    document.querySelectorAll('.popup-success').style.display = 'none';
+    document.querySelectorAll('.popup-content-only').style.display = 'block';
   });
 });
 
