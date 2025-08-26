@@ -47,7 +47,8 @@
       "name": "Gift Image Banner",
       "settings": {
         "bg_img": "shopify://shop_images/Group_1000008197.jpg",
-        "mob_btn_txt": "",
+        "mob_img": "shopify://shop_images/Frame.png",
+        "mob_btn_txt": "SHOP NOW",
         "mob_btn_link": "",
         "bottom_bar_txt": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
