@@ -4,7 +4,7 @@
      {% for pro in section.settings.prolist %}
      {% if pro.featured_image != blank %}
       <div class="quick-pro-item">
-       <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="444px" class="quick-pro-img">
+       <img src="{{ pro.featured_image | img_url: 'original' }}" width="100%" height="444px" class="quick-pro-img q-pro-img-main">
        <button class="quick-pro-btn" data-target="popup-{{ forloop.index }}">+</button>
       </div>
       <div id="popup-{{forloop.index }}" class="popup">
