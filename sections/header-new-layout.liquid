@@ -31,7 +31,12 @@
  </div>
 </div>
 <script>
-
+ var mobburger = document.getElementById('mobile-burger');
+ var innercontent = document.getElementById('menu');
+ mobburger.addEventListener('click',function(mobburger){
+   this.classList.toggle('close');
+   innercontent.classList.toggle('overlay');
+});
 </script>
 {% schema %}
 {
