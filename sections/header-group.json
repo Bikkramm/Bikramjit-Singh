@@ -38,6 +38,7 @@
       "name": "Header New Layout",
       "settings": {
         "mid_text": "Find the ideal gift for your loved ones.",
+        "mid_text_mob": "Get started with your \"Mi Solo\" kit.",
         "btn_txt": "CHOOSE GIFT",
         "btn_link": ""
       }
