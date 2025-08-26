@@ -100,8 +100,6 @@ document.querySelectorAll('.quick-pro-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     let targetId = this.getAttribute('data-target');
     let popup = document.getElementById(targetId);
-
-    // reset popup state
     popup.querySelector('.popup-content-only').style.display = 'block';
     popup.querySelector('.popup-success').style.display = 'none';
 
