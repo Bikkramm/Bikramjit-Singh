@@ -18,7 +18,13 @@
     </div>
     <div id="menu">
     <ul>
-    <li>{{ section.settings.mid_text }}</li>
+    <li>
+      {%if section.settings.mid_text_mob != blank %}
+      {{ section.settings.mid_text_mob }}
+    {% elsif section.settings.mid_text != blank %}
+      {{ section.settings.mid_text }}
+    {% endif %}
+    </li>
     <li>
       <a href="{{ section.settings.btn_link }}" class="header_main_btn">
        {{ section.settings.btn_txt }}
