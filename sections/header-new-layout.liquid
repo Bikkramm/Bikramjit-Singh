@@ -2,9 +2,9 @@
  <div class="header-inner page-width">
   <div class="header-new-wrap">
    {% if settings.logo != blank %}
-   <div class="h-n-logo">
+   <a href="{{ routes.root_url }}" class="h-n-logo">
     <img src="{{ settings.logo | img_url: 'master' }}" width="{{ settings.logo_width }}" height="100%">
-   </div>
+   </a>
    {% endif %}
    {% if section.settings.mid_text != blank %}
     <span class="header-midd-text small-hide medium-hide">{{section.settings.mid_text }}</span>
