@@ -87,15 +87,7 @@
     </div>
 </div>
 <script>
-/*
-document.querySelectorAll('.quick-pro-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    let targetId = this.getAttribute('data-target');
-    document.getElementById(targetId).style.display = 'flex';
-    firstcoloritem();
 
-  });
-});*/
 document.querySelectorAll('.quick-pro-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     let targetId = this.getAttribute('data-target');
@@ -104,7 +96,7 @@ document.querySelectorAll('.quick-pro-btn').forEach(btn => {
     popup.querySelector('.popup-success').style.display = 'none';
 
     popup.style.display = 'flex';
-    /*firstcoloritem();*/
+    
   });
 });
 
@@ -122,17 +114,6 @@ window.addEventListener('click', function(e) {
     }
   });
 });
-
-/*
-function firstcoloritem(){
-document.querySelectorAll('.popup').forEach(function(popup){
-  let firstcolor = popup.querySelector('.color-item');
-  if(firstcolor){
-   firstcolor.classList.add('active');
-  }
-});
-}
-firstcoloritem();*/
 
 document.querySelectorAll('.color-item').forEach(function(item){
   item.addEventListener('click',function(){
