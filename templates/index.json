@@ -50,7 +50,8 @@
         "mob_img": "shopify://shop_images/Frame.png",
         "mob_btn_txt": "SHOP NOW",
         "mob_btn_link": "",
-        "bottom_bar_txt": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+        "bottom_bar_txt": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL",
+        "bottom_bar_mob_txt": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
       }
     },
     "featured_collection": {
