@@ -167,18 +167,19 @@ document.querySelectorAll('.add-pro-btn').forEach(function(btn){
       .then(data => {
         /*alert("Added to cart!");
         console.log(data);*/
-         if (selectedColor === "Black" && selectedSize === "M") {
-      let jacketVariantId = "45279243763897"; 
-
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: jacketVariantId,
+        if(selectedColor === "Black" && selectedSize === "M" ){
+        let jacketid = "45279243894969";
+        fetch('cart/add.js',{
+          method: 'POST',
+          headers: {
+           'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+          id: jacketid,
           quantity: 1
         })
-      });
-    }
+        })
+        }
         popup.querySelector('.popup-content-only').style.display = 'none';
         popup.querySelector('.popup-success').style.display = 'flex';
         document.querySelectorAll('.go-cart-btn').forEach(function(gobtn){
