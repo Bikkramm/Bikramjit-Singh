@@ -30,16 +30,25 @@
             "btn_link": "",
             "btn_txt": "SHOP NOW"
           }
+        },
+        "mobile_description_KfWgwb": {
+          "type": "mobile_description",
+          "settings": {
+            "mob_desc": "<p>Discover Joy: Your Ultimate Holiday Gift Destination.<br/><br/></p>"
+          }
         }
       },
       "block_order": [
         "heading_7q8jLa",
         "description_b7rPxK",
-        "button_CepBmc"
+        "button_CepBmc",
+        "mobile_description_KfWgwb"
       ],
       "name": "Gift Image Banner",
       "settings": {
         "bg_img": "shopify://shop_images/Group_1000008197.jpg",
+        "mob_btn_txt": "",
+        "mob_btn_link": "",
         "bottom_bar_txt": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
     },
